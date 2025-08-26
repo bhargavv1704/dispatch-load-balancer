@@ -196,8 +196,4 @@ A Spring Boot REST API that assigns delivery orders to vehicles optimally, based
 
 For questions or clarifications, contact: manishbhargav1014@gmail.com
 
-<<<<<<< HEAD
 ---
-=======
----
->>>>>>> 3e5b92360f6444be84db49ae1810ad7cf065f758
