@@ -13,12 +13,52 @@ A Spring Boot REST API that assigns delivery orders to vehicles optimally, based
   - Capacity respected (no overload)
   - Distance minimization
 - **Error handling**, input validation, modular code
-- **Comprehensive JUnit tests (all passing)**
+- **Comprehensive JUnit tests**
 - **Easy local or Docker run**
 - **Full documentation and ready Postman/curl payloads**
 
 ---
+## Tech Stack
 
+- **Java 17+**
+- **Spring Boot 3.x**
+- **Maven**
+- **JUnit 5**
+- **Docker**
+- **H2 In-memory Database**
+
+---
+## How to Run (Locally with Maven)
+
+1. **Clone the repo:**
+    ```
+    git clone https://github.com/bhargavv1704/dispatch-load-balancer.git
+    cd dispatch-load-balancer
+    ```
+2. **Build:**
+    ```
+    mvn clean install
+    ```
+3. **Run:**
+    ```
+    mvn spring-boot:run
+    ```
+   > The API is now running at [http://localhost:8080](http://localhost:8080)
+
+---
+## How to Run (with Docker)
+
+1. **Build Docker image:**
+    ```
+    docker build -t dispatch-load-balancer .
+    ```
+2. **Run container:**
+    ```
+    docker run -p 8080:8080 dispatch-load-balancer
+    ```
+   > Access API at: [http://localhost:8080](http://localhost:8080)
+
+---
 ## API Documentation
 
 ### 1. Add Delivery Orders
@@ -113,55 +153,11 @@ A Spring Boot REST API that assigns delivery orders to vehicles optimally, based
 
 ---
 
-## How to Run (Locally with Maven)
-
-1. **Clone the repo:**
-    ```
-    git clone https://github.com/bhargavv1704/dispatch-load-balancer.git
-    cd dispatch-load-balancer
-    ```
-2. **Build:**
-    ```
-    mvn clean install
-    ```
-3. **Run:**
-    ```
-    mvn spring-boot:run
-    ```
-   > The API is now running at [http://localhost:8080](http://localhost:8080)
-
----
-
-## How to Run (with Docker)
-
-1. **Build Docker image:**
-    ```
-    docker build -t dispatch-load-balancer .
-    ```
-2. **Run container:**
-    ```
-    docker run -p 8080:8080 dispatch-load-balancer
-    ```
-   > Access API at: [http://localhost:8080](http://localhost:8080)
-
----
-
 ## Testing & Postman
 
 - Use the included Postman collection (`postman/Dispatch-API.postman_collection.json`) or build your own using above requests.
 - Test for: valid, over-capacity, duplicate ID, missing fields, and edge cases.
 - All tests (`mvn test`) must pass.
-
----
-
-## Tech Stack
-
-- **Java 17+**
-- **Spring Boot 3.x**
-- **Maven**
-- **JUnit 5**
-- **Docker**
-- **H2 In-memory Database**
 
 ---
 
